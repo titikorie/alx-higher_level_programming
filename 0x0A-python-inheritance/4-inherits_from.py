@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""Module for task 4"""
+"""This module for task 4"""
 
 
 def inherits_from(obj, a_class):
-    """Test if object is of class inheritting given class.
-
-    Arguments:
-        obj: object to test
-        class: class to test against
     """
-    if issubclass(obj.__class__, a_class) is True:
-        if obj.__class__ is not a_class:
-            return True
-    else:
-        return False
+    True if the object is an instance of a class that inherited
+    (directly or indirectly) from the specified class ; otherwise False
+    """
+    return type(obj) != a_class and issubclass(type(obj), a_class)
